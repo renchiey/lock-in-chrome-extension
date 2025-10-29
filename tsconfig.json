@@ -7,10 +7,9 @@
 
     /* === Module & Target === */
     "target": "ES6",                // modern JS syntax
-    "module": "preserve",                // enables import/export syntax
+    "module": "nodenext",                // enables import/export syntax
     "moduleResolution": "nodenext",        // resolves modules like Node.js
     "lib": ["ES6", "DOM"],          // includes DOM types for browser projects
-    "esModuleInterop": true,
 
 
     /* === Strictness & Safety === */
@@ -32,5 +31,5 @@
   },
   "include": ["src/**/*"],             // include all your TS files
   "exclude": ["node_modules"]
-}
+
 }
