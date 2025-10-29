@@ -1,0 +1,10 @@
+{
+	"dependencies": {
+		"@tailwindcss/cli": "^4.1.16",
+		"tailwindcss": "^4.1.16"
+	},
+	"devDependencies": {
+		"chrome-types": "^0.1.384",
+		"typescript": "^5.9.3"
+	}
+}

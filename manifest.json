@@ -1,0 +1,13 @@
+{
+  "name": "Locked In Extension",
+  "description": "Chrome extension that let's you lock in so that you can unlock your full potential.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": "images/icon.png"
+  }
+}

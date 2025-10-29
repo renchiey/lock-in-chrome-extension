@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.btn-inactive {
+  background-color: #34c427;
+}
+
+.btn-inactive:active {
+  background-color: #26941c;
+}
+
+.btn-active {
+  background-color: #d12a2a;
+}
+
+.btn-active:active {
+  background-color: #941c1c;
+}
