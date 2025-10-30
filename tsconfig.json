@@ -1,16 +1,14 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     /* === Output Settings === */
     "outDir": "./dist",                // compiled JS files go here
     "rootDir": "./src",                // your TS source files
 
     /* === Module & Target === */
-    "target": "ES6",                // modern JS syntax
-    "module": "nodenext",                // enables import/export syntax
-    "moduleResolution": "nodenext",        // resolves modules like Node.js
-    "lib": ["ES6", "DOM"],          // includes DOM types for browser projects
-
+    "target": "ES2020",                // modern JS syntax
+    "module": "ESNext",                // enables import/export syntax
+    "moduleResolution": "node",        // resolves modules like Node.js
+    "lib": ["ES2020", "DOM"],          // includes DOM types for browser projects
 
     /* === Strictness & Safety === */
     "strict": true,                    // enables all strict type checks
@@ -23,13 +21,13 @@
 
     /* === Clean Imports === */
     "esModuleInterop": true,           // enables default imports from CommonJS
+    "types": ["chrome-types"],
     "allowSyntheticDefaultImports": true,
 
     /* === File Handling === */
     "resolveJsonModule": true,         // allows importing .json files
     "noEmitOnError": true              // don’t emit JS if TS errors exist
   },
-  "include": ["src/**/*"],             // include all your TS files
+  "include": ["src/**/*", "settings"],             // include all your TS files
   "exclude": ["node_modules"]
-
 }

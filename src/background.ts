@@ -1,9 +1,27 @@
-let lockInActive = false;
+const unblockable = [
+  "chrome-extension://mgpjfgpnhmkodcfhphdcchrome-extension://mgpjfgpnhmkodcfhphdcjkpenaakijnj/views/settings.html",
+];
 
-export function toggleLockIn() {
-  lockInActive = !lockInActive;
-}
+chrome.webNavigation.onDOMContentLoaded.addListener(async (e) => {
+  console.log(`you visited this site ${e.url}`);
 
-export function isLockInActive() {
-  return lockInActive;
-}
+  const active = await chrome.storage.sync.get("lockInActive");
+
+  const domains = await chrome.storage.sync.get("blockedDomains");
+
+  if (
+    active["lockInActive"] &&
+    domains["blockedDomains"] &&
+    domains["blockedDomains"].filter((domain: string) => e.url.includes(domain))
+      .length &&
+    !unblockable.includes(e.url)
+  ) {
+    chrome.tabs.remove(e.tabId);
+    chrome.notifications.create({
+      title: "Naughty Boy",
+      message: `You visited ${e.url}. \n\nLock the hell in!`,
+      iconUrl: "../images/icon.png",
+      type: "basic",
+    });
+  }
+});
