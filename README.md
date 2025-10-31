@@ -15,6 +15,12 @@
 * Cross device settings synchronization
 * Domain blocking
 
+## Planned Features
+*  Timer/schedule system
+    - Will enable users to lock in for periods of times without needing to manually activate/deactivate
+* More sophisticated blocking Features
+* Hardcore mode - will make it difficult for users to deactivate Lock In mode without meaningful intention.
+
 ## How To Use (unpacked version)
 
 To clone and run this application, you'll just need [Git](https://git-scm.com) installed on your computer. From your command line:
