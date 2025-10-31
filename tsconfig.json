@@ -1,33 +1,22 @@
 {
   "compilerOptions": {
-    /* === Output Settings === */
-    "outDir": "./dist",                // compiled JS files go here
-    "rootDir": "./ts",                // your TS source files
-
-    /* === Module & Target === */
-    "target": "ES2020",                // modern JS syntax
-    "module": "ESNext",                // enables import/export syntax
-    "moduleResolution": "node",        // resolves modules like Node.js
-    "lib": ["ES2020", "DOM"],          // includes DOM types for browser projects
-
-    /* === Strictness & Safety === */
-    "strict": true,                    // enables all strict type checks
-    "noImplicitAny": true,             // prevents implicit `any` types
+    "outDir": "./dist",
+    "rootDir": "./ts",
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["ES2020", "DOM"],
+    "strict": true,
+    "noImplicitAny": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,              // faster build, skips checking type defs
-
-    /* === Source Maps === */
-    "sourceMap": true,                 // helps debugging in browser devtools
-
-    /* === Clean Imports === */
-    "esModuleInterop": true,           // enables default imports from CommonJS
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
     "types": ["chrome-types"],
     "allowSyntheticDefaultImports": true,
-
-    /* === File Handling === */
-    "resolveJsonModule": true,         // allows importing .json files
-    "noEmitOnError": true              // don’t emit JS if TS errors exist
+    "resolveJsonModule": true,
+    "noEmitOnError": true
   },
-  "include": ["ts/**/*"],             // include all your TS files
+  "include": ["ts/**/*"],
   "exclude": ["node_modules"]
 }
