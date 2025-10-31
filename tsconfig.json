@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* === Output Settings === */
     "outDir": "./dist",                // compiled JS files go here
-    "rootDir": "./src",                // your TS source files
+    "rootDir": "./ts",                // your TS source files
 
     /* === Module & Target === */
     "target": "ES2020",                // modern JS syntax
@@ -28,6 +28,6 @@
     "resolveJsonModule": true,         // allows importing .json files
     "noEmitOnError": true              // don’t emit JS if TS errors exist
   },
-  "include": ["src/**/*", "settings"],             // include all your TS files
+  "include": ["ts/**/*"],             // include all your TS files
   "exclude": ["node_modules"]
 }

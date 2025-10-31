@@ -1,5 +1,6 @@
 const unblockable = [
-  "chrome-extension://mgpjfgpnhmkodcfhphdcchrome-extension://mgpjfgpnhmkodcfhphdcjkpenaakijnj/views/settings.html",
+  chrome.runtime.getURL("views/settings.html"),
+  chrome.runtime.getURL("views/popup.html"),
 ];
 
 chrome.webNavigation.onDOMContentLoaded.addListener(async (e) => {
@@ -18,8 +19,8 @@ chrome.webNavigation.onDOMContentLoaded.addListener(async (e) => {
   ) {
     chrome.tabs.remove(e.tabId);
     chrome.notifications.create({
-      title: "Naughty Boy",
-      message: `You visited ${e.url}. \n\nLock the hell in!`,
+      title: "LOCK THE HELL IN!",
+      message: `You visited ${e.url}.\n\n Regain your focus.`,
       iconUrl: "../images/icon.png",
       type: "basic",
     });

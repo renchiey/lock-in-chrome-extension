@@ -31,6 +31,18 @@ button?.addEventListener("click", async () => {
         button.classList.remove("btn-inactive");
         if (title)
             title.innerText = "Lock In Active";
+        const tabs = await chrome.tabs.query({});
+        const blocked = await chrome.storage.sync.get("blockedDomains");
+        // close all blocked sites
+        if (blocked["blockedDomains"]) {
+            blocked["blockedDomains"].forEach((domain) => {
+                tabs.forEach((tab) => {
+                    if (tab.url?.includes(domain)) {
+                        chrome.tabs.remove(tab.id);
+                    }
+                });
+            });
+        }
     }
 });
 settings?.addEventListener("click", () => {
