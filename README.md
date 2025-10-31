@@ -9,16 +9,6 @@
 
 <h4 align="center">A chrome browser extension that helps you lock in and awaken your flow state.</h4>
 
-
-<p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
-  <a href="#download">Download</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#related">Related</a> •
-  <a href="#license">License</a>
-</p>
-
 ## Current Features
 
 * On/off activation - it ain't good to lock in 24/7
